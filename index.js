@@ -1,3 +1,14 @@
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Loader is Live and Running!');
+});
+
+app.listen(port, () => {
+  console.log(`Server is listening on port ${port}`);
+});
 const {
     default: makeWASocket,
     useMultiFileAuthState,
