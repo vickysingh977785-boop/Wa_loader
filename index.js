@@ -44,3 +44,7 @@ async function startLoader() {
 }
 
 startLoader();
+const express = require('express');
+const app = express();
+app.get('/', (req, res) => res.send('Loader is Live!'));
+app.listen(process.env.PORT || 3000);
